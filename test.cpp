@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 	buf[2]=(pix.blueQuantum()*255)/MaxRGB;
 	rh=RGB(buf[0],buf[1],buf[2])>>8;
 	rl=RGB(buf[0],buf[1],buf[2])&0xFF;
-	buf[1]=rh; buf[0]=rl;
+	buf[0]=rh; buf[1]=rl;
       }
       fwrite(buf,1,2,outfile);
      //putchar('x');
